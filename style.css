@@ -66,7 +66,7 @@ section {
 }
 
 section h2, h3 {
-    color: #007bff;
+    color: #122036;
 }
 
 section h3 {
@@ -85,7 +85,7 @@ section ul li {
 
 section a {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #122036;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -129,7 +129,7 @@ section a:hover {
 
 .project-details a {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #122036;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
