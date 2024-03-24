@@ -23,7 +23,7 @@ header {
     background-size: cover;
     background-position: center;
     z-index: -1; /* Ensure the background is behind the content */
-    opacity: 1; /* Adjust as needed, or keep it at 1 for no transparency */
+    opacity: 0.7; /* Adjust as needed, or keep it at 1 for no transparency */
 }
 
 /* Header content styles */
