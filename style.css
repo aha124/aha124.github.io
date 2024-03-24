@@ -121,12 +121,16 @@ section a:hover {
         align-items: center; /* Center items on small screens */
     }
 
-    .project img, .project-details {
-        max-width: 100%; /* Full width on small screens */
-        flex-basis: auto; /* Override the flex-basis */
-        margin-right: 0;
-        margin-bottom: 20px; /* Add margin at the bottom of each item */
+    .project img {
+    max-height: 300px; /* Increase max height for larger display */
+    max-width: 100%; /* Add max width to control width as well */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Image will scale within max-height and max-width */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between image and text */
     }
+
 
     .project-details {
         overflow: visible; /* Change if needed */
