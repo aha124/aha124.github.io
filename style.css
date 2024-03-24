@@ -34,6 +34,10 @@ header {
     text-align: center;
     padding: 20px 0;
 }
+.header-content h1 {
+    color: #ffffff; /* Bright white color */
+    /* Add any additional styling for the h1 element here */
+}
 
 /* Navigation styles */
 nav {
