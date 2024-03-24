@@ -73,24 +73,22 @@ section a:hover {
 
 .project {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items at the start of the flex container */
     margin-bottom: 20px;
-    max-width: 1200px; /* Limit the width of the project container */
+    flex-wrap: wrap; /* Wrap items when necessary */
 }
 
 .project img {
-    width: 100%;
-    max-width: 400px;
+    flex: 1 1 auto; /* Allow image to grow and shrink */
+    max-width: 400px; /* Maximum width for the image */
     margin-right: 20px;
-    margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-details {
-    flex: 1;
+    flex: 3 1 auto; /* Allow text container to grow and shrink */
     padding: 0 15px;
-    max-width: 700px; /* Set a max width for the text container */
 }
 
 .project-details h3 {
@@ -119,17 +117,17 @@ section a:hover {
 @media screen and (max-width: 768px) {
     .project {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center items on small screens */
     }
 
-    .project img {
-        width: 100%;
-        max-width: none;
+    .project img, .project-details {
+        max-width: 100%; /* Full width on small screens */
+        flex-basis: auto; /* Override the flex-basis */
         margin-right: 0;
+        margin-bottom: 20px; /* Add margin at the bottom of each item */
     }
 
     .project-details {
-        overflow: hidden;
-        max-width: 100%;
+        overflow: visible; /* Change if needed */
     }
 }
