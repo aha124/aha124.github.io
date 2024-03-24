@@ -11,62 +11,65 @@
         <div class="header-content">
             <h1>Anthony Arbaiza - Data Scientist</h1>
             <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="#resume" target="_blank">Resume</a>
+                <a href="#" data-section="about">About</a>
+                <a href="#" data-section="projects">Projects</a>
+                <a href="#" data-section="contact">Contact</a>
+                <a href="#" data-section="resume">Resume</a>
             </nav>
         </div>
     </header>
-    <section id="about">
-    <div class="about-container">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>I am a seasoned Senior Data Scientist specializing in leveraging data-driven insights to drive strategic decision-making and operational improvements. With a rich background in data science, machine learning, and database architecture, I have a proven track record of implementing innovative solutions that enhance efficiency, patient care, and conservation efforts across diverse industries, including healthcare, military, and agriculture. My expertise lies in utilizing advanced analytics tools such as Python, R, SQL, and data visualization techniques to extract valuable insights from complex datasets and develop actionable strategies to solve complex problems.</p>
-        </div>
-        <img src="headshot.jpg" alt="Portrait of Anthony Arbaiza" class="profile-picture">
+    <div id="content">
+        <section id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a seasoned Senior Data Scientist specializing in leveraging data-driven insights to drive strategic decision-making and operational improvements. With a rich background in data science, machine learning, and database architecture, I have a proven track record of implementing innovative solutions that enhance efficiency, patient care, and conservation efforts across diverse industries, including healthcare, military, and agriculture. My expertise lies in utilizing advanced analytics tools such as Python, R, SQL, and data visualization techniques to extract valuable insights from complex datasets and develop actionable strategies to solve complex problems.</p>
+                </div>
+                <img src="headshot.jpg" alt="Portrait of Anthony Arbaiza" class="profile-picture">
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="chatbot.jpg" alt="Chatbot AI">
+                <div class="project-details">
+                    <h3>Novel Use of Chatbot Technology to Educate Patients before Breast Biopsy</h3>
+                    <p>Developed a chatbot using Botkit.AI, Node.JS, and Glitch to provide patients with accessible information and resources regarding breast biopsy and treatment. Conducted a literature review, analyzed patient language patterns using AntConc and SAS, and performed statistical analysis to validate the chatbot's responses. Created a backend service, designed a user-friendly mobile interface, and developed a decision tree architecture that enabled patients to select topics based on lifestyle, procedure info, side effects, and mental health. In a pilot study, 87% of patients noted an improvement in sentiment after using the chatbot.</p>
+                    <p><a href="https://pubmed.ncbi.nlm.nih.gov/31492408/" target="_blank">View publication on PubMed</a></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="mri.webp" alt="MRI Scan Machine">
+                <div class="project-details">
+                    <h3>Machine Learning & Data Science to Support Patient Care</h3>
+                    <p>Engineered a machine learning framework to forecast patient health outcomes. Analyzed extensive healthcare datasets, applying statistical models and AI to refine predictive accuracy. Formulated backend algorithms, streamlined data processing, and established a decision support system to aid clinical decisions. This solution demonstrated significant enhancements in patient care efficiency.</p>
+                    <p><a href="mri-results.pdf" target="_blank">View detailed results and analysis</a></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="dashboard.webp" alt="Dashboard">
+                <div class="project-details">
+                    <h3>Enterprise Radiology Dashboard Development Facilitating Academic and Community Practice Integration</h3>
+                    <p>Designed an enterprise-level radiology dashboard to aggregate patient data, optimize diagnostic workflows, and monitor radiology metrics. Integrated analytical tools for performance assessment, contributing to improved patient care coordination and facility management. This platform has been instrumental in elevating the standards of radiological services offered.</p>
+                    <p><a href="https://pubmed.ncbi.nlm.nih.gov/37820841/" target="_blank">View publication on PubMed</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Check out my professional experience and skills.</p>
+            <a href="resume.pdf" target="_blank">Download My Resume</a>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me for any inquiries or opportunities:</p>
+            <ul>
+                <li>Email: anthony.arbaiza124@gmail.com</li>
+                <li>Phone: (570) 419-8540</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/anthonyarbaiza/" target="_blank">linkedin.com/in/anthonyarbaiza</a></li>
+            </ul>
+        </section>
     </div>
-</section>
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <img src="chatbot.jpg" alt="Chatbot AI">
-        <div class="project-details">
-            <h3>Novel Use of Chatbot Technology to Educate Patients before Breast Biopsy</h3>
-            <p>Developed a chatbot using Botkit.AI, Node.JS, and Glitch to provide patients with accessible information and resources regarding breast biopsy and treatment. Conducted a literature review, analyzed patient language patterns using AntConc and SAS, and performed statistical analysis to validate the chatbot's responses. Created a backend service, designed a user-friendly mobile interface, and developed a decision tree architecture that enabled patients to select topics based on lifestyle, procedure info, side effects, and mental health. In a pilot study, 87% of patients noted an improvement in sentiment after using the chatbot.</p>
-            <p><a href="https://pubmed.ncbi.nlm.nih.gov/31492408/" target="_blank">View publication on PubMed</a></p>
-        </div>
-    </div>
-    <div class="project">
-        <img src="mri.webp" alt="MRI Scan Machine">
-        <div class="project-details">
-            <h3>Machine Learning & Data Science to Support Patient Care</h3>
-            <p>Engineered a machine learning framework to forecast patient health outcomes. Analyzed extensive healthcare datasets, applying statistical models and AI to refine predictive accuracy. Formulated backend algorithms, streamlined data processing, and established a decision support system to aid clinical decisions. This solution demonstrated significant enhancements in patient care efficiency.</p>
-            <p><a href="mri-results.pdf" target="_blank">View detailed results and analysis</a></p>
-        </div>
-    </div>
-    <div class="project">
-        <img src="dashboard.webp" alt="Dashboard">
-        <div class="project-details">
-            <h3>Enterprise Radiology Dashboard Development Facilitating Academic and Community Practice Integration</h3>
-            <p>Designed an enterprise-level radiology dashboard to aggregate patient data, optimize diagnostic workflows, and monitor radiology metrics. Integrated analytical tools for performance assessment, contributing to improved patient care coordination and facility management. This platform has been instrumental in elevating the standards of radiological services offered.</p>
-            <p><a href="https://pubmed.ncbi.nlm.nih.gov/37820841/" target="_blank">View publication on PubMed</a></p>
-        </div>
-    </div>
-</section>
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Check out my professional experience and skills.</p>
-        <a href="resume.pdf" target="_blank">Download My Resume</a>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me for any inquiries or opportunities:</p>
-        <ul>
-            <li>Email: anthony.arbaiza124@gmail.com</li>
-            <li>Phone: (570) 419-8540</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/anthonyarbaiza/" target="_blank">linkedin.com/in/anthonyarbaiza</a></li>
-        </ul>
-    </section>
+    <script src="script.js"></script>
 </body>
 </html>
