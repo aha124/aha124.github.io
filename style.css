@@ -157,3 +157,36 @@ section a:hover {
         overflow: visible;
     }
 }
+
+/* Profile picture and About Me section */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Adjust space between image and text */
+}
+
+.about-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.profile-picture {
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Fixed width, adjust as necessary */
+    height: 150px; /* Fixed height, adjust as necessary */
+    object-fit: cover; /* Ensure the aspect ratio is maintained */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px; /* Add space between image and text on small screens */
+    }
+}
