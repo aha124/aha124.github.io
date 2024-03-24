@@ -1,5 +1,7 @@
+/* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -11,12 +13,32 @@ body {
     height: 100vh;
 }
 
+/* Header styles */
 header {
     background-color: #007bff;
     color: white;
     padding: 20px 0;
     text-align: center;
     scroll-snap-align: start;
+    position: relative; /* Ensure proper positioning for background */
+}
+
+/* Header background image styles */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('header_background.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+/* Navigation styles */
+nav {
+    position: relative;
 }
 
 nav a {
@@ -29,6 +51,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Section styles */
 section {
     margin: 30px auto;
     padding: 20px;
@@ -71,20 +94,21 @@ section a:hover {
     background-color: #0056b3;
 }
 
+/* Project styles */
 .project {
     display: flex;
-    align-items: flex-start; /* Align items at the start of the flex container */
+    align-items: flex-start;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Wrap items when necessary */
+    flex-wrap: wrap;
 }
 
 .project img {
-    max-height: 200px; /* Set a maximum height for all images */
-    width: auto; /* Ensure the width is auto to maintain the aspect ratio */
-    object-fit: contain; /* This will ensure that the image is scaled within the max-height, keeping its aspect ratio */
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Ensure there is space between image and details */
+    margin-right: 20px;
 }
 
 .project-details {
@@ -115,55 +139,21 @@ section a:hover {
     background-color: #0056b3;
 }
 
+/* Responsive design */
 @media screen and (max-width: 768px) {
     .project {
         flex-direction: column;
-        align-items: center; /* Center items on small screens */
+        align-items: center;
     }
 
-    .project img {
-    max-height: 300px; /* Increase max height for larger display */
-    max-width: 100%; /* Add max width to control width as well */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Image will scale within max-height and max-width */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Space between image and text */
+    .project img, .project-details {
+        max-width: 100%;
+        flex-basis: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
-
 
     .project-details {
-        overflow: visible; /* Change if needed */
-    }
-}
-.about-container {
-    display: flex;
-    align-items: flex-start; /* Align items at the start of the flex container */
-    gap: 20px; /* Adjust space between image and text */
-}
-
-.about-text {
-    flex: 1; /* Take up remaining space */
-}
-
-.profile-picture {
-    border-radius: 50%; /* Circular image */
-    width: 150px; /* Fixed width, adjust as necessary */
-    height: 150px; /* Fixed height, adjust as necessary */
-    object-fit: cover; /* Ensure the aspect ratio is maintained */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
-}
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center; /* Center items on small screens */
-    }
-
-    .profile-picture {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 20px; /* Add space between image and text on small screens */
+        overflow: visible;
     }
 }
