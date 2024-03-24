@@ -198,3 +198,37 @@ section a:hover {
         margin-bottom: 20px; /* Add space between image and text on small screens */
     }
 }
+
+.experience-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.experience-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-image.left {
+    order: -1;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.experience-image.right {
+    order: 1;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.experience-text {
+    flex: 1;
+}
+
+.experience-text h3 {
+    margin-top: 0;
+}
