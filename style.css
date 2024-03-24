@@ -101,6 +101,7 @@ section a:hover {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .project-details a:hover {
