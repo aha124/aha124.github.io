@@ -39,10 +39,13 @@ section {
     scroll-snap-align: start;
 }
 
+section h2, h3 {
+    color: #007bff;
+}
+
 section h3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #007bff;
 }
 
 section ul {
@@ -71,21 +74,23 @@ section a:hover {
 .project {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Adjusted from 40px to reduce space */
+    margin-bottom: 20px;
+    max-width: 1200px; /* Limit the width of the project container */
 }
 
 .project img {
     width: 100%;
-    max-width: 400px; /* Changed to ensure responsiveness */
+    max-width: 400px;
     margin-right: 20px;
-    margin-bottom: 20px; /* Added for when images stack on small screens */
+    margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-details {
     flex: 1;
-    padding: 0 15px; /* Add padding if necessary */
+    padding: 0 15px;
+    max-width: 700px; /* Set a max width for the text container */
 }
 
 .project-details h3 {
@@ -118,12 +123,13 @@ section a:hover {
     }
 
     .project img {
-        width: 100%; /* Full width on small screens */
-        max-width: none; /* Removes the max-width */
-        margin-right: 0; /* Remove margin between image and details */
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
     }
 
     .project-details {
-        overflow: hidden; /* Handle overflowing content */
+        overflow: hidden;
+        max-width: 100%;
     }
 }
