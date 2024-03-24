@@ -136,3 +136,30 @@ section a:hover {
         overflow: visible; /* Change if needed */
     }
 }
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust space between text and image */
+}
+
+.profile-picture {
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Fixed width, adjust as necessary */
+    height: 150px; /* Fixed height, adjust as necessary */
+    object-fit: cover; /* Ensure the aspect ratio is maintained */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px; /* Add space between image and text on small screens */
+    }
+}
