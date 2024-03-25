@@ -8,8 +8,6 @@ const sectionContents = document.querySelectorAll('.section-content');
 sectionContents.forEach((content, index) => {
     if (index !== 0) {
         content.style.display = 'none';
-    } else {
-        content.classList.add('active');
     }
 });
 
@@ -19,30 +17,14 @@ navLinks.forEach(link => {
         e.preventDefault();
         const sectionId = link.getAttribute('data-section');
 
-        // Remove 'active' class from all navigation links
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-
-        // Add 'active' class to the clicked navigation link
-        link.classList.add('active');
-
         // Hide all section contents
         sectionContents.forEach(content => {
-            content.classList.remove('active');
-            setTimeout(() => {
-                content.style.display = 'none';
-            }, 500);
+            content.style.display = 'none';
         });
 
         // Show the selected section content
         const selectedSection = document.getElementById(sectionId);
         const selectedContent = selectedSection.querySelector('.section-content');
-        setTimeout(() => {
-            selectedContent.style.display = 'block';
-            setTimeout(() => {
-                selectedContent.classList.add('active');
-            }, 50);
-        }, 500);
+        selectedContent.style.display = 'block';
     });
 });
