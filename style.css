@@ -250,3 +250,28 @@ section.active {
     transition: visibility 0s linear 0s, opacity 0.5s linear; /* Transition for visibility with opacity */
 }
 
+
+#content {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    margin: 0; /* Override other margin settings */
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+#content section.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.5s linear;
+}
+
