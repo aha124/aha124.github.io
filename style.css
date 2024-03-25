@@ -1,45 +1,40 @@
-/* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Global styles */
 body {
-    /* Other global styles remain the same */
+    /* Global styles */
 }
 
-/* Header styles */
 header {
-    /* Other header styles remain the same */
-    position: relative; /* This is important for absolute positioning context */
+    position: relative;
+    /* Other header styles */
 }
 
-/* Header background image styles */
 .header-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0; /* Ensure full width coverage */
-    bottom: 0; /* Ensure full height coverage */
-    background-image: url('header_background.jpg'); /* Ensure this is the correct path to your image */
+    right: 0;
+    bottom: 0;
+    background-image: url('header_background.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Ensure the background is behind the content */
-    opacity: 0.7; /* Adjust as needed, or keep it at 1 for no transparency */
+    z-index: -1;
+    opacity: 0.7;
 }
 
-/* Header content styles */
 .header-content {
-    position: relative; /* This will make the content layer on top of the background */
-    z-index: 10; /* Higher than the background's z-index */
+    position: relative;
+    z-index: 10;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
+
 .header-content h1 {
-    color: #ffffff; /* Bright white color */
-    /* Add any additional styling for the h1 element here */
+    color: #ffffff;
+    /* Additional styling for the h1 element */
 }
 
-/* Navigation styles */
 nav {
     position: relative;
 }
@@ -59,7 +54,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Section styles */
 section {
     margin: 30px auto;
     padding: 20px;
@@ -102,7 +96,6 @@ section a:hover {
     background-color: #0056b3;
 }
 
-/* Project styles */
 .project {
     display: flex;
     align-items: flex-start;
@@ -147,7 +140,6 @@ section a:hover {
     background-color: #0056b3;
 }
 
-/* Responsive design */
 @media screen and (max-width: 768px) {
     .project {
         flex-direction: column;
@@ -166,43 +158,54 @@ section a:hover {
     }
 }
 
-/* Profile picture and About Me section */
 .about-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Adjust space between image and text */
+    gap: 20px;
 }
 
 .about-text {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
 }
 
 .profile-picture {
-    border-radius: 50%; /* Circular image */
-    width: 150px; /* Fixed width, adjust as necessary */
-    height: 150px; /* Fixed height, adjust as necessary */
-    object-fit: cover; /* Ensure the aspect ratio is maintained */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        align-items: center; /* Center items on small screens */
+        align-items: center;
     }
 
     .profile-picture {
         width: 120px;
         height: 120px;
-        margin-bottom: 20px; /* Add space between image and text on small screens */
+        margin-bottom: 20px;
     }
 }
 
-.experience-container {
+#about {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+#experience {
+    padding: 40px 0;
+}
+
+.experience-item {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .experience-image {
