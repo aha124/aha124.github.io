@@ -236,3 +236,12 @@ section a:hover {
 .experience-text h3 {
     margin-top: 0;
 }
+
+.section-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.section-content.active {
+    opacity: 1;
+}
