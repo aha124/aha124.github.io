@@ -1,31 +1,37 @@
-window.addEventListener('load', (event) => {
-    // Get all navigation links
-    const navLinks = document.querySelectorAll('nav a');
+// Get all navigation links
+const navLinks = document.querySelectorAll('nav a');
 
-    // Get all section content elements
-    const sectionContents = document.querySelectorAll('.section-content');
+// Get all section elements
+const sections = document.querySelectorAll('section');
 
-    // Initially hide all sections except the first one
-    sectionContents.forEach((content, index) => {
-        content.style.display = index === 0 ? 'block' : 'none';
-    });
+// Hide all sections except the first one
+sections.forEach((section, index) => {
+    if (index !== 0) {
+        section.style.display = 'none';
+    }
+});
 
-    // Add click event listener to each navigation link
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const sectionId = link.getAttribute('data-section');
-
-            // Hide all section contents
-            sectionContents.forEach(content => {
-                content.style.display = 'none';
-            });
-
-            // Show the selected section content
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
+// Add click event listener to each navigation link
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = link.getAttribute('data-section');
+        
+        // Hide all sections
+        sections.forEach(section => {
+            section.style.display = 'none';
         });
+        
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.style.display = 'block';
+        
+        // Remove 'active' class from all navigation links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Add 'active' class to the clicked navigation link
+        link.classList.add('active');
     });
 });
