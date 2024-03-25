@@ -236,3 +236,16 @@ section a:hover {
 .experience-text h3 {
     margin-top: 0;
 }
+
+/* Initial state of the sections is invisible for the fade effect */
+section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Adjust time as needed */
+}
+
+/* When a section has the 'active' class, it will be visible and fade in */
+section.active {
+    display: block;
+    opacity: 1;
+}
