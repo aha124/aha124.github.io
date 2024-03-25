@@ -237,15 +237,16 @@ section a:hover {
     margin-top: 0;
 }
 
-/* Initial state of the sections is invisible for the fade effect */
+/* Updated CSS for fade transitions */
 section {
-    display: none;
+    visibility: hidden; /* Initially, sections are invisible and take up space */
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Adjust time as needed */
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear; /* Transition for visibility after opacity */
 }
 
-/* When a section has the 'active' class, it will be visible and fade in */
 section.active {
-    display: block;
+    visibility: visible; /* Make section visible */
     opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.5s linear; /* Transition for visibility with opacity */
 }
+
