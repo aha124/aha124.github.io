@@ -1,15 +1,15 @@
 // Get all navigation links
 const navLinks = document.querySelectorAll('nav a');
 
-// Get all section elements
-const sections = document.querySelectorAll('section');
+// Get all section content elements
+const sectionContents = document.querySelectorAll('.section-content');
 
-// Hide all sections except the first one
-sections.forEach((section, index) => {
+// Hide all section contents except the first one
+sectionContents.forEach((content, index) => {
     if (index !== 0) {
-        section.style.display = 'none';
+        content.style.display = 'none';
     } else {
-        section.classList.add('active');
+        content.classList.add('active');
     }
 });
 
@@ -27,20 +27,21 @@ navLinks.forEach(link => {
         // Add 'active' class to the clicked navigation link
         link.classList.add('active');
 
-        // Hide all sections
-        sections.forEach(section => {
-            section.classList.remove('active');
+        // Hide all section contents
+        sectionContents.forEach(content => {
+            content.classList.remove('active');
             setTimeout(() => {
-                section.style.display = 'none';
+                content.style.display = 'none';
             }, 500);
         });
 
-        // Show the selected section
+        // Show the selected section content
         const selectedSection = document.getElementById(sectionId);
+        const selectedContent = selectedSection.querySelector('.section-content');
         setTimeout(() => {
-            selectedSection.style.display = 'block';
+            selectedContent.style.display = 'block';
             setTimeout(() => {
-                selectedSection.classList.add('active');
+                selectedContent.classList.add('active');
             }, 50);
         }, 500);
     });
