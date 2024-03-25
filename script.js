@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
     // Get all navigation links
     const navLinks = document.querySelectorAll('nav a');
 
     // Get all section content elements
     const sectionContents = document.querySelectorAll('.section-content');
 
-    // Hide all section contents except the first one
+    // Initially hide all sections except the first one
     sectionContents.forEach((content, index) => {
-        if (index !== 0) {
-            content.style.display = 'none';
-        }
+        content.style.display = index === 0 ? 'block' : 'none';
     });
 
     // Add click event listener to each navigation link
@@ -26,10 +24,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Show the selected section content
             const selectedSection = document.getElementById(sectionId);
             if (selectedSection) {
-                const selectedContent = selectedSection.querySelector('.section-content');
-                if (selectedContent) {
-                    selectedContent.style.display = 'block';
-                }
+                selectedSection.style.display = 'block';
             }
         });
     });
