@@ -54,14 +54,38 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Global section styles */
 section {
     margin: 30px auto;
-    padding: 20px;
-    max-width: 800px;
+    max-width: 800px; /* Adjust or remove width as needed for absolute positioning */
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start;
+}
+
+/* Specific styles for sections within #content */
+#content {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Added to ensure full width */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+#content section.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.5s linear;
 }
 
 section h2, h3 {
@@ -237,41 +261,4 @@ section a:hover {
     margin-top: 0;
 }
 
-/* Updated CSS for fade transitions */
-section {
-    visibility: hidden; /* Initially, sections are invisible and take up space */
-    opacity: 0;
-    transition: visibility 0s linear 0.5s, opacity 0.5s linear; /* Transition for visibility after opacity */
-}
-
-section.active {
-    visibility: visible; /* Make section visible */
-    opacity: 1;
-    transition: visibility 0s linear 0s, opacity 0.5s linear; /* Transition for visibility with opacity */
-}
-
-
-#content {
-    position: relative;
-    min-height: 100vh;
-}
-
-#content section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
-    margin: 0; /* Override other margin settings */
-    padding: 20px; /* Adjust as needed */
-    box-sizing: border-box; /* Include padding in the width */
-}
-
-#content section.active {
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s linear 0s, opacity 0.5s linear;
-}
 
