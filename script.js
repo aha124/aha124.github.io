@@ -4,27 +4,36 @@ const navLinks = document.querySelectorAll('nav a');
 // Get all section elements
 const sections = document.querySelectorAll('section');
 
-// Initialize sections to hidden
+// Function to hide all sections
+function hideSections() {
+  sections.forEach(s => {
+    s.classList.remove('active');
+    // We don't need to set display none here immediately, the transition will handle the fade
+  });
+}
+
+// Function to show a section with the fade effect
+function showSection(section) {
+    // Hide all sections first
+    hideSections();
+
+    // Wait for the fade out to complete before showing the new section
+    setTimeout(() => {
+        // Ensure that the section is ready to be faded in
+        section.style.display = 'block';
+        // Trigger the fade in by adding the 'active' class
+        setTimeout(() => section.classList.add('active'), 10); // Small timeout to ensure the display change has taken effect
+    }, 500); // This should match the CSS transition time
+}
+
+// Initialize sections to hidden, except for the first one
 sections.forEach((section, index) => {
     section.style.display = 'none';
     if (index === 0) {
         section.style.display = 'block';
-        setTimeout(() => section.classList.add('active'), 0); // Allow for initial fade-in
+        setTimeout(() => section.classList.add('active'), 10); // Small delay to ensure the display change has taken effect
     }
 });
-
-// Function to handle showing a section
-function showSection(section) {
-    // Hide all sections
-    sections.forEach(s => {
-        s.classList.remove('active');
-        setTimeout(() => s.style.display = 'none', 500); // Wait for fade-out before hiding
-    });
-
-    // Show the selected section
-    section.style.display = 'block';
-    setTimeout(() => section.classList.add('active'), 0); // Wait for display to change before fading in
-}
 
 // Add click event listener to each navigation link
 navLinks.forEach(link => {
