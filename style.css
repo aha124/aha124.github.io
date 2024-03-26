@@ -32,7 +32,12 @@ header {
 
 .header-content h1 {
     color: #ffffff;
-    /* Additional styling for the h1 element */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+        2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -43,6 +48,11 @@ nav a {
     color: white;
     padding: 0 20px;
     text-decoration: none;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 nav a.active {
