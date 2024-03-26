@@ -320,6 +320,51 @@ section#resume object, section#resume iframe {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-link {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-link img {
+    width: 100%; /* or any specific size */
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain; /* ensures the image is scaled correctly within its container */
+}
+
+.section-link:hover img {
+    transform: scale(1.1);
+}
+
+.section-link span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section-link:hover span {
+    opacity: 1;
+}
+
+
 /* Smaller devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     section#resume object, section#resume iframe {
