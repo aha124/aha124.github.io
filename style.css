@@ -81,21 +81,16 @@ section {
 }
 
 #content section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0; /* Added to ensure full width */
-    visibility: hidden;
+    display: none; /* Hide all sections initially */
     opacity: 0;
-    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
-    padding: 20px; /* Adjust as needed */
-    box-sizing: border-box; /* Include padding in the width */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s linear;
 }
 
 #content section.active {
-    visibility: visible;
+    display: block; /* Show active section */
     opacity: 1;
-    transition: visibility 0s linear 0s, opacity 0.5s linear;
 }
 
 section h2, h3 {
@@ -322,11 +317,17 @@ section#resume object, section#resume iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 20px;
+    justify-items: center;
+    align-items: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto; /* Adjust margin as needed */
+}
+
+.grid-container:after {
+    content: '';
+    grid-column: 1 / -1;
 }
 
 .section-link {
