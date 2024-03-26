@@ -230,6 +230,21 @@ section a:hover {
     margin-right: 20px;
 }
 
+.button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #003974;
+}
+
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;
