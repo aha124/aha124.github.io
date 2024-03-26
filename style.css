@@ -367,10 +367,14 @@ section#resume object, section#resume iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotateX(90deg);
+    transform: rotateX(-90deg);
     transform-origin: bottom;
     backface-visibility: hidden;
     transition: transform 0.5s;
+}
+
+.section-link:hover .icon-container {
+    transform: rotateX(90deg);
 }
 
 .section-link:hover span {
