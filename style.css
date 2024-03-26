@@ -339,9 +339,10 @@ section#resume object, section#resume iframe {
 }
 
 .section-link img {
-    width: 100%; /* or any specific size */
+    max-width: 100px; /* or whatever size fits your design */
     height: auto; /* maintain aspect ratio */
-    object-fit: contain; /* ensures the image is scaled correctly within its container */
+    display: block;
+    margin: 0 auto; /* center the icons in their grid cells */
 }
 
 .section-link:hover img {
