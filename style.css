@@ -198,8 +198,9 @@ section a:hover {
 
 .about-container {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px; /* Adjust based on your design needs */
+    clear: both; /* Clear float to prevent layout issues */
 }
 
 .about-text {
@@ -217,6 +218,16 @@ section a:hover {
     height: 150px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+    float: right;
+    margin-left: 20px;
+}
+
+.left {
+    float: left;
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
