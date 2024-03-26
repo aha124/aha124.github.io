@@ -18,17 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize: hide all sections
     hideSections();
 
-    // Handle grid container links for sections
-    document.querySelectorAll('.grid-container a').forEach(link => {
+    // Handle section links in the 3D plane
+    document.querySelectorAll('.section-link').forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const sectionId = link.getAttribute('href');
-
+            const sectionId = link.getAttribute('data-section');
             hideSections();
-            const selectedSection = document.querySelector(sectionId);
+            const selectedSection = document.getElementById(sectionId);
             showSection(selectedSection);
-
-            gridContainer.style.display = 'none'; // Hide the grid container
+            gridContainer.style.display = 'none';
         });
     });
 
@@ -37,12 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const sectionId = link.getAttribute('data-section');
-
             hideSections();
             const selectedSection = document.getElementById(sectionId);
             showSection(selectedSection);
-
             // Do not hide the grid container here as it's already hidden
         });
+    });
+
+    // Add rotation to the grid container
+    let rotateY = 0;
+    gridContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        rotateY += e.deltaY * 0.01;
+        gridContainer.style.transform = `rotateY(${rotateY}deg)`;
     });
 });
