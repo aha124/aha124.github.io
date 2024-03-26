@@ -206,6 +206,11 @@ section a:hover {
     flex: 1;
 }
 
+.profile-pictures {
+    display: flex;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
 .profile-picture {
     border-radius: 50%;
     width: 150px;
